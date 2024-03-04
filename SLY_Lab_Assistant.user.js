@@ -2331,7 +2331,7 @@
             let [fleetState, extra] = getFleetState(fleetAcctInfo);
             if (fleetState == 'Idle' && extra.length > 1 && moveDist && moveX !== null && moveX !== '' && moveY != null && moveY !== '') {
                 if (extra[0] !== moveX || extra[1] !== moveY) {
-                    let warpCost = calculateWarpFuelBurn(userFleets[i], moveDist);
+                    let warpCost = calculateWarpFuelBurn(userFleets[i], moveDist * 1.3);
                     let subwarpCost = calculateSubwarpFuelBurn(userFleets[i], moveDist);
                     let fleetCurrentFuelTank = await solanaConnection.getParsedTokenAccountsByOwner(userFleets[i].fuelTank, {programId: new solanaWeb3.PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA')});
                     let currentFuel = fleetCurrentFuelTank.value.find(item => item.account.data.parsed.info.mint === sageGameAcct.account.mints.fuel.toString());
