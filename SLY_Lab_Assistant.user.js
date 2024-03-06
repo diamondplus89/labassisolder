@@ -20,7 +20,7 @@
 
     let enableAssistant = false;
     let initComplete = false;
-    let rpcEndpoints = ['https://solana-mainnet.g.alchemy.com/v2/cBd5_phpw3qAKULWZcaAeeM9XLe2yxyO','https://rpc.hellomoon.io/55e58be7-ab31-42db-8611-893955fc15d0'];
+    let rpcEndpoints = ['https://rpc.hellomoon.io/55e58be7-ab31-42db-8611-893955fc15d0','https://solana-mainnet.g.alchemy.com/v2/cBd5_phpw3qAKULWZcaAeeM9XLe2yxyO'];
     const priorityFee = 1; // Priority Fee added to each transaction in Lamports. Set to 0 (zero) to disable priority fees. 1 Lamport = 0.000000001 SOL
 
     const connectionProxy = {
